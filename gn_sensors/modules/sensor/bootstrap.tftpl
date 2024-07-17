@@ -1,0 +1,3 @@
+curl -H "key: ${api_key}" \
+-L https://api.greynoise.io/v1/workspaces/${workspace_id}/sensors/bootstrap/script \
+| sudo bash -s -- -k ${api_key} -p ${public_ip} -s ${custom_ssh_port}

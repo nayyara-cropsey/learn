@@ -35,7 +35,7 @@ func NewManagement(ctx context.Context, c Config) (*Management, error) {
 func (m *Management) Iterator(pageSize int) *Iterator {
 	return &Iterator{
 		mgr:      m.mgr,
-		page:     0,
+		page:     10,
 		pageSize: pageSize,
 		hasNext:  true,
 	}

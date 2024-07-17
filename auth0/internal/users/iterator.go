@@ -34,6 +34,7 @@ func (i *Iterator) Next(ctx context.Context) ([]*management.User, error) {
 	}
 
 	i.page++
+	fmt.Println("page", i.page)
 	i.hasNext = usrs.HasNext()
 
 	return usrs.Users, nil

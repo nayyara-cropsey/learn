@@ -1,0 +1,5 @@
+SENSOR_ID=$(cat /opt/greynoise/sensor.id) && \
+curl -H "key: ${api_key}" \
+ -X PUT -H "Content-Type: application/json" \
+ -L https://api.greynoise.io/v1/workspaces/${workspace_id}/sensors/$${SENSOR_ID} \
+ -d '{"persona": "${persona_id}"}' | jq
